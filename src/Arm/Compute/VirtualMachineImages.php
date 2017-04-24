@@ -250,7 +250,7 @@ class VirtualMachineImages
         $method = 'GET';
 
         $path = strtr($path, ['{location}' => $location, '{publisherName}' => $publisherName, '{offer}' => $offer, '{skus}' => $skus, '{subscriptionId}' => $this->_client->getSubscriptionId()]);
-        $queryParams = ['$filter' => $filter, '$top' => $top, '$orderby' => $orderby, 'api-version' => $this->_client->getApiVersion()];
+        $queryParams = ['filter' => $filter, 'top' => $top, 'orderby' => $orderby, 'api-version' => $this->_client->getApiVersion()];
         $headers = $customHeaders;
         if ($this->_client->getAcceptLanguage() != null) {
             $headers['accept-language'] = $this->_client->getAcceptLanguage();
